@@ -21,7 +21,8 @@ class App extends React.Component {
         </div>
         <div className="row">
           <div className="col-xs-10 col-offset-1">
-            <Home user={user}/>
+          {/*You cannot render object in React, pass the object with keys to access its value*/}
+            <Home user={user.name}/>
             <Home/>
           </div>
         </div>
@@ -29,5 +30,6 @@ class App extends React.Component {
     );
   }
 }
+
 
 render(<App/>,document.getElementById('app'));
