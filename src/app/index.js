@@ -7,6 +7,11 @@ import { Home } from './components/Home';
 
 class App extends React.Component {
   render() {
+    var user = {
+      name: "John Doe",
+      age: 25,
+      hobbies: ["Eating", "Sleeping"],
+    };
     return (
       <div className="container">
         <div className="row">
@@ -16,6 +21,8 @@ class App extends React.Component {
         </div>
         <div className="row">
           <div className="col-xs-10 col-offset-1">
+          {/*You cannot render object in React, pass the object with keys to access its value*/}
+            <Home user={user.name}/>
             <Home/>
           </div>
         </div>
@@ -23,5 +30,6 @@ class App extends React.Component {
     );
   }
 }
+
 
 render(<App/>,document.getElementById('app'));

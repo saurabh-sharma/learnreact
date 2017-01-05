@@ -5,6 +5,7 @@ export class Home extends React.Component{
     return(
       <div>
         <p>In a new Component</p>
+        <p>Your name is {this.props.user}</p>
       </div>
     );
   }
